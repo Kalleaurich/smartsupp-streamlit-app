@@ -1,5 +1,3 @@
-Erstelle in diesem Ordner eine neue Datei namens `README.md` mit folgendem Inhalt für meinen Professor:
-
 # 💊 SmartSupp – KI-gestützter Supplement-Optimierer
 
 SmartSupp ist eine interaktive, datenbasierte Web-Applikation (entwickelt mit Streamlit), die Machine-Learning-Vorhersagen mit einem sportwissenschaftlichen Regelwerk (Expertensystem) kombiniert. Die App schützt Fitness-Einsteiger aktiv vor Marketing-getriebenen Fehlkäufen und bietet Fortgeschrittenen ein präzises, wöchentliches Fortschritts-Tracking.
