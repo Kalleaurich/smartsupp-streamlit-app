@@ -4,7 +4,7 @@ SmartSupp ist eine interaktive, datenbasierte Web-Applikation (entwickelt mit St
 
 ## 🔗 Live-Anwendung
 Die lauffähige Web-Applikation ist unter folgendem Link direkt im Browser erreichbar:
-👉 **[HIER DEINEN STREAMLIT-DEPLOYMENT-LINK EINTRAGEN, Z.B. https://streamlit.app]**
+👉 **http://localhost:8501/**
 
 ---
 
