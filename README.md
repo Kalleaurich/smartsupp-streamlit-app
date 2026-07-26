@@ -1,40 +1,48 @@
-# 💊 SmartSupp – KI-gestützter Supplement-Optimierer
+# 💊 SmartSupp – KI-gestützter Supplement-Optimierer & Tracker
 
 SmartSupp ist eine interaktive, datenbasierte Web-Applikation (entwickelt mit Streamlit), die Machine-Learning-Vorhersagen mit einem sportwissenschaftlichen Regelwerk (Expertensystem) kombiniert. Die App schützt Fitness-Einsteiger aktiv vor Marketing-getriebenen Fehlkäufen und bietet Fortgeschrittenen ein präzises, wöchentliches Fortschritts-Tracking.
 
+## 🔗 Live-Anwendung
+Die lauffähige Web-Applikation ist unter folgendem Link direkt im Browser erreichbar:
+👉 **[HIER DEINEN STREAMLIT-DEPLOYMENT-LINK EINTRAGEN, Z.B. https://streamlit.app]**
+
+---
+
 ## 🏗️ System-Architektur (Hybrid-Ansatz)
 Reine Machine-Learning-Modelle neigen in der Praxis dazu, statistische Verzerrungen (Biases) aus historischen Daten unreflektiert weiterzugeben. SmartSupp löst dieses Problem durch eine **Hybrid-Architektur**:
-1. **Machine Learning Core**: Liefert die datenbasierte Kern-Prognose und berechnet Erfolgswahrscheinlichkeiten auf Basis gelernter Muster.
-2. **Regelbasiertes Expertensystem (Heuristiken)**: Fängt ungenaue Rohdaten-Begriffe ab, berechnet dynamische, individuelle Dosierungen basierend auf biometrischen Echtzeitdaten (z. B. g/kg Körpergewicht) und steuert das integrierte **Geld-Spar-Warnsystem** (z. B. zur Aufklärung über den wissenschaftlich umstrittenen Nutzen von BCAAs).
+1. **Machine Learning Core**: Liefert die datenbasierte Kern-Prognose und berechnet Erfolgswahrscheinlichkeiten auf Basis gelernter Muster (SVM, Decision Tree, Random Forest).
+2. **Regelbasiertes Expertensystem (Heuristiken)**: Fängt ungenaue Rohdaten-Begriffe ab, berechnet dynamische, individuelle Dosierungen basierend auf biometrischen Echtzeitdaten (g/kg Körpergewicht) und steuert das integrierte **Geld-Spar-Warnsystem**.
 
-## 📊 Multi-Datensatz-Architektur & ML-Modelle
-Um eine saubere mathematische Trennung zu gewährleisten und die Vorgabe mehrerer Datenquellen zu erfüllen, nutzt das Projekt zwei voneinander unabhängige Datensätze und ML-Modelle:
+---
 
-*   **Tab 1: Der Einstiegs-Rechner (Klassifikation)**
-    *   **Modell**: `model_supplement_classifier.pkl` (Random Forest Classifier)
-    *   **Datenbasis**: Historische Supplement-Konsumdaten, demografische Profile und subjektive Zufriedenheitswerte.
-    *   **Funktion**: Berechnet die Live-Wahrscheinlichkeit für das optimale Supplement-Paket angepasst an das Nutzerprofil in der Sidebar.
-*   **Tab 2: Der Fortschritts-Tracker (Regression)**
-    *   **Modell**: `model_progress_regressor.pkl` (Random Forest Regressor)
-    *   **Datenbasis**: Wöchentliche biometrische Trainingsdaten (Gewichtsverlauf, Kalorienzufuhr, Kraftwerte, Ermüdungsparameter).
-    *   **Funktion**: Führt einen präzisen Soll-Ist-Vergleich des Körpergewichts durch und prognostiziert Plateaus.
+## 📊 Repository-Struktur (nach dem QUA³CK-Prozessmodell)
+Das Repository ist streng nach den Phasen des wissenschaftlichen QUA³CK-Modells gegliedert:
 
-## 💻 UI-Features & Aufbau
-*   **Globale Sidebar**: Zentrale Steuerung des detaillierten Nutzerprofils (Alter, Größe, Fitness-Level etc.) mit direkter Echtzeit-Synchronisation im Hauptbereich.
-*   **Geld-Spar-Warnsystem**: Filtert Produkte mit schlechter Evidenz oder geringer Modell-Zustimmung aktiv heraus und schützt den Verbraucher vor Fehlkäufen.
-*   **Flexibles Tracking**: Ermöglicht einen optionalen Ernährungs-Check-in (Slider werden bei ungenauem Tracking ausgeblendet; das Modell rechnet stabil mit wissenschaftlichen Standard-Mittelwerten weiter).
-*   **Dosierungs- & Ermüdungs-Checks**: Dynamische Infoboxen analysieren Muskelkater, Schlafqualität und gemeldete Gramm-Mengen, um direkt anwendbare Tipps zur Einnahme und zum Timing zu geben.
+*   **📂 Phase_Q (Question):** Dokumentation der Forschungsfrage, Zielgruppen-Definition und Definition der operativen KPIs.
+*   **📂 Phase_U (Understanding):** Explorative Datenanalyse (EDA), Analyse des Klassenungleichgewichts, Imputations-Strategie für Missing Values und Data Leakage Prävention.
+*   **📂 Phase_A3 (Analysis & Algorithms):** Quellcode des Modell-Trainings. Enthält die Scikit-Learn-Pipeline-Architektur und das Training von Random Forest, SVM und Entscheidungsbäumen inklusive Hyperparameter-Tuning.
+*   **📂 Phase_C (Conclude & Compare):** Mathematische Validierung mittels 5-Fold Cross-Validation, Analyse des R²-Wertes und Dokumentation des Algorithmen-Vergleichs.
+*   **📂 Phase_K (Knowledge Transfer):** Der produktive Quellcode der Streamlit-Anwendung (`app.py`), die serialisierten Modelle (`*.pkl`) und Design-Assets.
 
-## 🛠️ Installation & Lokaler Start
-Um die Applikation lokal auf Ihrem System auszuführen, müssen die trainierten `.pkl`-Modelle im Hauptverzeichnis liegen.
+---
 
-1. **Repository klonen oder in den Projektordner wechseln**:
+## 💻 UI-Features & Live-Dashboard
+*   **Globale Sidebar:** Zentrale Steuerung des biometrischen Nutzerprofils mit sofortiger reaktiver Inferenz auf dem Hauptbildschirm.
+*   **⚙️ Interaktive Modellsteuerung:** Integriertes Experten-Panel in der Sidebar. Erlaubt den Live-Wechsel der Algorithmen und die Echtzeit-Visualisierung von Overfitting durch manuelle Hyperparameter-Anpassung.
+*   **Geld-Spar-Warnsystem:** Clean zentriertes Kachel-Design, das evidenzbasiert vor unwissenschaftlichen Fehlkäufen (z. B. BCAAs) warnt.
+*   **Flexibles Tracking:** Optionale Ausblendung des Makro-Trackings per Checkbox; das System rechnet im Hintergrund stabil mit sportwissenschaftlichen Mittelwerten weiter.
+
+---
+
+## 🛠️ Lokale Installation & Start
+
+1. **Repository klonen und in den Ordner wechseln**:
    ```bash
    cd "Big Data Präsi"
    ```
 2. **Abhängigkeiten installieren**:
    ```bash
-   pip install streamlit scikit-learn joblib pandas numpy
+   pip install streamlit scikit-learn joblib pandas numpy python-pptx
    ```
 3. **Streamlit-App fehlerfrei starten**:
    ```bash
