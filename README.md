@@ -4,7 +4,7 @@ SmartSupp ist eine interaktive, datenbasierte Web-Applikation (entwickelt mit St
 
 ## 🔗 Live-Anwendung
 Die lauffähige Web-Applikation ist unter folgendem Link direkt im Browser erreichbar:
-👉 **https://kalleaurich-smartsupp-streamlit-app-app-dni3i5.streamlit.app/**
+👉 **https://smartsupp.streamlit.app/**
 
 ---
 
