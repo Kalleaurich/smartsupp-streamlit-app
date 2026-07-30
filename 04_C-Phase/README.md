@@ -2,7 +2,7 @@
 # C — Conclude & Compare: Evaluation & Modellgüte
 
 ## Klassifikator (Supplement-Empfehlung)
-- **Test-Accuracy: 26,1 %** auf ungesehenen Testdaten (8 Supplement-Klassen)
+- **Test-Accuracy: 28,5 %** auf ungesehenen Testdaten (8 Supplement-Klassen)
 - **Zufalls-Baseline: 12,5 %** — das Modell liegt also mehr als doppelt so hoch wie reines Raten
 - Alle drei getesteten Algorithmen (Random Forest, SVM, Decision Tree) liegen nah beieinander
   (26,1 % / 28,6 % / 28,8 %) — ein starkes Indiz dafür, dass nicht die Algorithmus-Wahl das
