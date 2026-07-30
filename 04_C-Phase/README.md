@@ -5,7 +5,7 @@
 - **Test-Accuracy: 28,5 %** auf ungesehenen Testdaten (8 Supplement-Klassen)
 - **Zufalls-Baseline: 12,5 %** — das Modell liegt also mehr als doppelt so hoch wie reines Raten
 - Alle drei getesteten Algorithmen (Random Forest, SVM, Decision Tree) liegen nah beieinander
-  (26,1 % / 28,6 % / 28,8 %) — ein starkes Indiz dafür, dass nicht die Algorithmus-Wahl das
+  (28,5 % / 28,6 % / 28,8 %) — ein starkes Indiz dafür, dass nicht die Algorithmus-Wahl das
   Problem ist, sondern die Datenqualität selbst (verrauschte, historische Konsumdaten)
 
 ## Regressor (Fortschritts-Prognose)
