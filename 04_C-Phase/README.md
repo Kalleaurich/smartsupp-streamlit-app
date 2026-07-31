@@ -19,6 +19,3 @@ Weil beide Modelle für sich genommen nicht zuverlässig genug sind, um blind ve
 wird die ML-Prognose in der App mit einem regelbasierten Expertensystem kombiniert
 (Geld-Spar-Warnsystem, BCAA-Sonderregel, Dosierungs-Richtwerte). Details dazu direkt in der
 Streamlit-App (Tab 1) sowie in der Projekt-Präsentation.
-
-## Quellcode der Evaluation
-Siehe `03_A3_Modellierung/` — Abschnitt "C — Conclude & Compare" im Notebook.
